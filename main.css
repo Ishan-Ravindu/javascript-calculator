@@ -1,60 +1,61 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-  font-family: Gotham Rounded, sans-serif;
+table {
+  width: 25%;
+  height: 300px;
+  border-collapse: collapse;
+  font-family: arial, sans-serif;
+}
+td {
+  padding: 5px;
+  text-align: center;
+}
+.output-container{
+  width: 100%;
+  height: 50px;
+  text-align: right;
+  font-family: monospace;
+  font-size: 3em;
+  font-weight: bold;
+  border-color: gray;
+  border-width: 1px;
+  border-style: solid;
+  opacity: 0.5;
+}
+.output-container:hover{
+  opacity: 1;
+}
+button[type=button]{
+  opacity: 0.8;
+  background-color: #f5f5f5;
+  background-image: linear-gradient(top, #f5f5f5, #f1f1f1);
+  border: 1px solid #dedede;
+  color: #444;
+  height: 45px;
+  width: 65px;
+  text-align: center;
+  font-size: 1.2em;
   font-weight: normal;
 }
-
-body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to right, #CBCE91FF, #EA738DFF);
-  }
-
-  .calculator-grid {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    min-height: 100vh;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
-    }
-
-    .calculator-grid > button {
-      cursor: pointer;
-      font-size: 2rem;
-      border: 1px, solid #FFFFFF;
-      outline: none;
-      background-color: rbga(255, 255, 255, 0.75);
-    }
-
-      .calculator-grid > button:hover {
-        background-color: #a9a9a9;
-      }
-
-      .span-two {
-        grid-column: span 2;
-        color: #adf802;
-        background-color: rgba(139, 0, 139, 0.8);
-      }
-
-      .output{
-        grid-column: 1 / -1;
-        background-color: rgba(0, 0, 0, 0.75);
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-around;
-        flex-direction: column;
-        padding: 10px;
-        word-wrap: break-word;
-        word-break: break-all;
-      }
-
-      .output .previous-operand{
-        color: rgba(255,255, 255, 0.75);
-        font-size: 1.5rem;
-      }
-
-      .output .current-operand{
-        color: white;
-        font-size: 2.5rem;
-      }
+button[type=button]:hover{
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(top, #f8f8f8, #f1f1f1);
+    opacity: 1;
+    border: 1px solid #c6c6c6;
+    color: #222;
+    cursor: pointer;
+}
+button[name=equal] {
+  background-color: #4d90fe;
+  background-image: linear-gradient(top, #4d90fe, #4787ed);
+  border: 1px solid #3079ed;
+  color: #fefefe;
+}
+button[name=equal]:hover {
+  background-color: #4d90fe;
+  background-image: linear-gradient(top, #4d90fe, #357ae8);
+  border: 1px solid #2f5bb7;
+  color: #fefefe;
+}
+button[name=operator] {
+  border: 1px solid #c6c6c6;
+  background-color: #d6d6d6;
+}
