@@ -110,25 +110,30 @@ operationButtons.forEach(button => {
   })
 })
 
-equalsButton.addEventListener('click', button => {
+equalsButton.addEventListener('click', () => {
   calculator.compute()
   calculator.updateDisplay()
 })
 
-allClearButton.addEventListener('click', button => {
+allClearButton.addEventListener('click', () => {
   calculator.clear()
   calculator.updateDisplay()
 })
 
-deleteButton.addEventListener('click', button => {
+deleteButton.addEventListener('click', () => {
   calculator.delete()
   calculator.updateDisplay()
 })
 
 document.addEventListener('keydown', function (event) {
-  let patternForNumbers = /[0-9,.]/g;
-  let patternForOperators = /[+\-*.\/]/g
+  let patternForNumbers = /[0-9]/g;
+  let patternForOperators = /[+\-*\/]/g
   if (event.key.match(patternForNumbers)) {
+    event.preventDefault();
+    calculator.appendNumber(event.key)
+    calculator.updateDisplay()
+  }
+  if (event.key === '.') {
     event.preventDefault();
     calculator.appendNumber(event.key)
     calculator.updateDisplay()
