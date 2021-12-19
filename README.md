@@ -1,6 +1,6 @@
 # javascript-calculator
 
-demo - https://codesandbox.io/s/java-8sevb
+demo - https://8sevb.csb.app/
 
 [![Edit javascript-calculator](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/javascript-calculator-8sevb?fontsize=14&hidenavigation=1&theme=dark)
 
